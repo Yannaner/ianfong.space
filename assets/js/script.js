@@ -178,6 +178,7 @@ window.onclick = function(event) {
   }
 }
 
+
 // Close modal with Escape key
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
