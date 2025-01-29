@@ -290,7 +290,8 @@ document.addEventListener('DOMContentLoaded', function() {
     modalContent.querySelector('.project-description').textContent = project.description;
     
     // Render technologies
-    modalContent.querySelector('.project-tech').innerHTML = project.technologies
+    modalContent.querySelector('.project-tech').innerHTML = 
+    `<p>Technlogy used:</p>`+project.technologies
       .map(tech => `<span class="tech-tag">${tech}</span>`).join('');
     
     // Render team members

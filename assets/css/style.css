@@ -2105,3 +2105,118 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 0.5rem;
   color: var(--light-gray);
 }
+
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #464343;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.hackathon-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-item {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.project-category {
+  font-size: 1em;
+  color: #bbbbbb;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center; /* Center the modal horizontally */
+  align-items: center; /* Center the modal vertically */
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%; /* Limit the height */
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  outline: 200px solid #ffffff; /* Add a clear outline */
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-links a {
+  color: #1e90ff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
