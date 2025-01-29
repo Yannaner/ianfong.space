@@ -182,6 +182,9 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
           <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Hackathons</button>
+          </li>
+          <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
 
@@ -206,10 +209,10 @@
         <section class="about-text">
           <h1>Hey everyone, welcome to my personal page!</h1>
           <p>
-            My name is Ian. I’m a passionate triathlete and a problem-solver who's 
+            My name is Ian. I'm a passionate triathlete and a problem-solver who's 
             as driven in the tech world as I am in the endurance sport. 
-           I’m currently diving deep into AI and computer science at Penn State, with a focus on 
-            AI research. I’m always seeking new challenges to push my 
+           I'm currently diving deep into AI and computer science at Penn State, with a focus on 
+            AI research. I'm always seeking new challenges to push my 
             limits both professionally and personally.
           </p>
 
@@ -228,23 +231,7 @@
           <h3 class="h3 service-title">What i'm working</h3>
 
           <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">EZNote</h4>
-                <p class="service-item-text">eznotes.space</p>
-                <p class="service-item-text">
-                  AI powered note-taking tool that elevates productivity.</nav>
-                </p>
-              </div>
-
-            </li>
+<!--  -->
 
             <li class="service-item">
 
@@ -264,27 +251,11 @@
                   App contains advance accounting knowledge and engaging game elements.
                 </p>
               </div>
-
-              <!-- <div class="service-content-box">
-                <h4 class="h4 service-item-title">AuditArcade</h4>
-
-                <p class="service-item-text">
-                 AI Based Accounting Tool
-                </p>
-              </div> -->
-
             </li>
 
           </ul>
 
         </section>
-
-
-
-        <!--
-          - testimonials modal
-        -->
-
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -822,122 +793,17 @@
         </header>
 
         <section class="blog-posts">
+          <ul class="blog-posts-list" id="blogPostsList">
+            <!-- Blog posts will be dynamically inserted here -->
+          </ul>
+        </section>
 
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/S__5628001_0.jpg" alt="blog-banner-box" loading="lazy">
-                </figure>
-
-                <div class="blog-content" onclick="openBlogModal()">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Triathlon</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Oct 23 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">How Triathlon Shaped Who I Am Today.</h3>
-                  
-                  <p class="blog-text">
-                    
-                  </p>
-
-                </div>
-
-
-                <div id="blogModal" class="modal">
-                  <div class="modal-content">
-                    <span class="close-button" onclick="closeBlogModal()">&times;</span>
-                    <div class="modal-header">
-                      <p class="blog-category">Triathlon</p>
-                      <time datetime="2022-02-23">Oct 23 2024</time>
-                    </div>
-                    <h2>How Triathlon Shaped Who I Am Today.</h2>
-                    <img src="assets/images/ironman.jpg" width="740">
-                    <div class="modal-body">
-                
-                      <p><br>Triathlon is more than just a sport. It’s an experience that shaped who I am today, turning me from an addictive gamer into a disciplined athlete and, more importantly, a purposeful leader. There’s something powerful about combining swimming, cycling, and running—a physical trifecta that demands endurance, focus, and balance. But the beauty of triathlon lies not only in the physical test but in the mental and emotional growth it brings. It has transformed me from the inside out, equipping me with the lifelong skills of perseverance, resilience, and determination. And while I first entered this sport for personal growth, I quickly discovered it could become a gateway to something far bigger than myself.
-                      </p>
-                      <p><br>One of the most important lessons I’ve learned as a triathlete is the value of pushing through adversity. Triathlons demand constant effort, and with every stroke, pedal, and step, there’s a new challenge to overcome. But as I gained experience, I also noticed something else—injuries. Both my own and those of my fellow triathletes. As I trained, I saw friends sidelined by preventable injuries, and I felt the frustration of physical setbacks firsthand. It was a cycle I knew could be broken with the right support, preparation, and tools.
-                      </p>
-                      <p><br>Driven by this realization, I didn’t just want to participate in triathlons—I wanted to improve the training experience for everyone in my community. I gathered a team of five other triathletes from different schools, each of us equally passionate about computer science. Together, we began brainstorming how we could use our skills in computer science to build something that could help prevent overtraining and reduce injuries. Thus, the Triathlon Training Enhancement Project was born.
-                      </p>
-                      <p><br>In many ways, this project became my own personal triathlon. Each phase of development was its own test of endurance, whether it was coding, researching, or leading team discussions. But unlike a traditional triathlon, this challenge required me to tap into new skills, especially in leadership. My role as the project founder and leader taught me that leadership is more than assigning tasks—it’s about bringing people together, aligning different perspectives, and creating a shared vision. We weren’t just building an app; we were creating a tool that could genuinely improve people’s lives.
-                      </p>
-                      <p><br>I learned to listen, adapt, and foster a sense of trust within our team. There were times when our ideas clashed, or when technical problems seemed insurmountable, but much like in triathlon, I leaned on my resilience and determination to keep pushing forward. Each of my teammates brought a unique strength, and it was my job to ensure we stayed focused and motivated toward our shared goal.
-                      </p>
-                      <p><br>When the app was finally completed, it combined performance metrics, health indicators, and training loads into a streamlined user experience that gamified triathlon training. The satisfaction of seeing our creation used by our local triathletes, helping them avoid the same struggles we faced, was the most rewarding feeling I’ve ever experienced. But beyond the technical success of the project, I gained something even more valuable—a sense of purpose.
-                      </p>
-                      <p><br>This experience sparked the entrepreneurial mindset that I now carry with me. Leading a team to create something from scratch, something with real-world impact, showed me the potential I had not only to lead but to innovate. It broadened my thinking and helped me realize that I want to do more than just succeed in my own endeavors—I want to contribute to society in a meaningful way.
-                      </p>
-                      <p><br>The path ahead is clear to me now. I want to combine my technical skills with my passion for sports and use that combination to develop AI-driven solutions that benefit communities in more ways than one. Whether it’s helping athletes train smarter or creating tools to simplify and enhance processes in business. I want to be part of the next wave of AI innovation that changes how we live and work.</p>
-                      <p><br>Just as I’ve learned in triathlon, the journey is not about avoiding difficulty; it’s about facing challenges head-on and using them as fuel for growth. Perseverance, resilience, and determination—these are not just lessons from sport, they are pillars that guide every aspect of my life.
-                      </p>
-                      <p><br>In triathlon, each race is a test of will, but it’s also a chance to grow, learn, and improve. I view life in much the same way—a chance to push myself further, to build on the skills I’ve learned, and to contribute to a learning community that thrives on diversity and innovation. Just as triathlon has changed me, I hope to use what I’ve learned to help transform the lives of others.</p>
-                      <p><br></p>
-                      <p><br></p>
-
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
+      </article>
 
 
 
 
-            <li class="blog-post-item">
-              <a href="#">
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/hackprinceton2.jpg" alt="blog-banner-box" loading="lazy">
-                </figure>
-
-                <div class="blog-content" onclick="openBlogModal()">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Hackathon</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Nov 10 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">My First Hackathon Win.</h3>
-                  
-                  <p class="blog-text">
-                    
-                  </p>
-
-                </div>
-
-                
-                <div id="blogModal2" class="modal">
-                  <div class="modal-content">
-                    <span class="close-button" onclick="closeBlogModal()">&times;</span>
-                    <div class="modal-header">
-                      <p class="blog-category">Hackathon</p>
-                      <time datetime="2022-02-23">Nov 11 2024</time>
-                    </div>
-                    <h2>My First Hackathon Win.</h2>
-                    <img src="assets/images/hackprinceton2.jpg" width="740">
-                    <div class="modal-body">
-                
-                      <p><br>Triathlon is more than just a sport. It’s an experience that shaped who I am today, turning me from an addictive gamer into a disciplined athlete and, more importantly, a purposeful leader. There’s something powerful about combining swimming, cycling, and running—a physical trifecta that demands endurance, focus, and balance. But the beauty of triathlon lies not only in the physical test but in the mental and emotional growth it brings. It has transformed me from the inside out, equipping me with the lifelong skills of perseverance, resilience, and determination. And while I first entered this sport for personal growth, I quickly discovered it could become a gateway to something far bigger than myself.
-                      </p>
-                      
-
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
       <!--
         - #CONTACT
       -->
@@ -947,6 +813,7 @@
 
   </main>
 
+  <script src="./assets/js/blogData.js"></script>
   <script src="./assets/js/script.js"></script>
 
   <!--
@@ -954,6 +821,54 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Blog Modal Template -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="modal-header">
+        <p class="blog-category"></p>
+        <time></time>
+      </div>
+      <h2></h2>
+      <img class="modal-header-image" src="" alt="">
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Add this after your hackathon projects list -->
+  <div id="hackathonModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="modal-header">
+        <p class="project-category"></p>
+        <time></time>
+      </div>
+      <h2></h2>
+      <p class="project-achievement"></p>
+      <img class="modal-header-image" src="" alt="">
+      <p class="project-description"></p>
+      <div class="project-tech"></div>
+      <div class="team-members"></div>
+      <div class="project-links">
+        <a href="#" class="demo-link" target="_blank">Live Demo</a>
+        <a href="#" class="github-link" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Update your hackathon section to this simpler structure -->
+  <article class="hackathons" data-page="hackathons">
+    <header>
+      <h2 class="h2 article-title">Hackathon Projects</h2>
+    </header>
+
+    <section class="hackathon-projects">
+      <ul class="projects-list" id="hackathonProjectsList">
+        <!-- Projects will be dynamically inserted here -->
+      </ul>
+    </section>
+  </article>
 
 </body>
 

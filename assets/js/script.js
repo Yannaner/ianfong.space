@@ -158,78 +158,237 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Blog pop up window
-// Add this JavaScript
-function openBlogModal() {
-  document.getElementById('blogModal').style.display = 'block';
-  document.body.style.overflow = 'hidden'; // Prevent background scrolling
-}
-
-function closeBlogModal() {
-  document.getElementById('blogModal').style.display = 'none';
-  document.body.style.overflow = 'auto'; // Restore scrolling
-}
-
-// Close modal when clicking outside of it
-window.onclick = function(event) {
+// Blog functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const blogPostsList = document.getElementById('blogPostsList');
   const modal = document.getElementById('blogModal');
-  if (event.target == modal) {
-    closeBlogModal();
+
+  // Render blog posts
+  function renderBlogPosts() {
+    blogPostsList.innerHTML = blogPosts.map(post => `
+      <li class="blog-post-item" data-post-id="${post.id}">
+        <a href="#">
+          <figure class="blog-banner-box">
+            <img src="${post.thumbnail}" alt="${post.title}" loading="lazy">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">${post.category}</p>
+              <span class="dot"></span>
+              <time datetime="${post.date}">${post.date}</time>
+            </div>
+            <h3 class="h3 blog-item-title">${post.title}</h3>
+          </div>
+        </a>
+      </li>
+    `).join('');
+
+    // Add click handlers to blog posts
+    document.querySelectorAll('.blog-post-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const postId = parseInt(item.dataset.postId);
+        openBlogPost(postId);
+      });
+    });
   }
-}
 
+  // Open blog post modal
+  function openBlogPost(postId) {
+    const post = blogPosts.find(p => p.id === postId);
+    if (!post) return;
 
-// Close modal with Escape key
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closeBlogModal();
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.querySelector('.blog-category').textContent = post.category;
+    modalContent.querySelector('time').textContent = post.date;
+    modalContent.querySelector('h2').textContent = post.title;
+    modalContent.querySelector('.modal-header-image').src = post.headerImage;
+    modalContent.querySelector('.modal-body').innerHTML = post.content;
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Event listeners
+  modal.querySelector('.close-button').addEventListener('click', closeModal);
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Initialize blog posts
+  renderBlogPosts();
+});
+
+// Hackathon functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const hackathonList = document.getElementById('hackathonProjectsList');
+  const modal = document.getElementById('hackathonModal');
+
+  // Render hackathon projects
+  function renderHackathonProjects() {
+    hackathonList.innerHTML = hackathonProjects.map(project => `
+      <li class="hackathon-project-item" data-project-id="${project.id}">
+        <a href="#">
+          <figure class="project-banner-box">
+            <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
+          </figure>
+          <div class="project-content">
+            <div class="project-meta">
+              <p class="project-category">${project.event}</p>
+              <span class="dot"></span>
+              <time datetime="${project.date}">${project.date}</time>
+            </div>
+            <h3 class="h3 project-item-title">${project.title}</h3>
+            <p class="project-achievement">${project.achievement}</p>
+          </div>
+        </a>
+      </li>
+    `).join('');
+
+    // Add click handlers to hackathon projects
+    document.querySelectorAll('.hackathon-project-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectId = parseInt(item.dataset.projectId);
+        openHackathonProject(projectId);
+      });
+    });
+  }
+
+  // Open hackathon project modal
+  function openHackathonProject(projectId) {
+    const project = hackathonProjects.find(p => p.id === projectId);
+    if (!project) return;
+
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.querySelector('.project-category').textContent = project.event;
+    modalContent.querySelector('time').textContent = project.date;
+    modalContent.querySelector('h2').textContent = project.title;
+    modalContent.querySelector('.project-achievement').textContent = project.achievement;
+    modalContent.querySelector('.modal-header-image').src = project.thumbnail;
+    modalContent.querySelector('.project-description').textContent = project.description;
+    
+    // Render technologies
+    modalContent.querySelector('.project-tech').innerHTML = project.technologies
+      .map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+    
+    // Render team members
+    modalContent.querySelector('.team-members').innerHTML = 
+      `<p>Team:</p>` + project.teamMembers
+        .map(member => `<span class="team-member">${member}</span>`).join('');
+    
+    // Update links
+    modalContent.querySelector('.demo-link').href = project.demoLink;
+    modalContent.querySelector('.github-link').href = project.githubLink;
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Event listeners
+  if (modal) {
+    modal.querySelector('.close-button').addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  // Initialize hackathon projects if on hackathon page
+  if (hackathonList) {
+    renderHackathonProjects();
   }
 });
 
-// async function openBlogModal(blogFile = 'mytriathlonjourney') {
-//   try {
-//     // Fetch the blog content
-//     const response = await fetch(`./blogfiles/${blogFile}.json`);
-//     if (!response.ok) throw new Error('Blog post not found');
-//     const blogData = await response.json();
+// Initialize Hackathons
+function initializeHackathons() {
+  const projectsList = document.getElementById('hackathonProjectsList');
+  
+  projectsList.innerHTML = hackathonProjects.map(project => `
+    <li class="hackathon-project-item">
+      <div class="project-card">
+        <img src="${project.thumbnail}" alt="${project.title}" class="project-image">
+        <div class="project-info">
+          <h3 class="project-title">${project.title}</h3>
+          <div class="project-metadata">
+            <p class="project-event">${project.event}</p>
+            <p class="project-date">${project.date}</p>
+          </div>
+          <p class="project-achievement">${project.achievement}</p>
+          <p class="project-description">${project.description}</p>
+          <div class="project-tech">
+            ${project.technologies.map(tech => `
+              <span class="tech-tag">${tech}</span>
+            `).join('')}
+          </div>
+          <div class="team-members">
+            <p>Team:</p>
+            ${project.teamMembers.map(member => `
+              <span class="team-member">${member}</span>
+            `).join('')}
+          </div>
+          <div class="project-links">
+            <a href="${project.demoLink}" class="demo-link">Live Demo</a>
+            <a href="${project.githubLink}" class="github-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  `).join('');
+}
 
-//     // Update modal content
-//     const modal = document.getElementById('blogModal');
-//     const modalContent = `
-//       <div class="modal-container">
-//         <button class="modal-close" onclick="closeBlogModal()">×</button>
-        
-//         <div class="modal-content">
-//           <div class="modal-header">
-//             <p class="blog-category">${blogData.category}</p>
-//             <time datetime="${blogData.date}">${blogData.date}</time>
-//           </div>
-          
-//           <h2 class="modal-title">${blogData.title}</h2>
-          
-//           <div class="modal-body">
-//             ${blogData.content.split('\n\n').map(paragraph => 
-//               `<p class="blog-paragraph">${paragraph}</p>`
-//             ).join('')}
-//           </div>
-//         </div>
-//       </div>
-//     `;
+// Update the existing elementIsInView function to include hackathons
+function elementIsInView(elem) {
+  const activeElement = elem.getBoundingClientRect();
+  return (
+    activeElement.top <= 0 &&
+    activeElement.bottom > document.documentElement.clientHeight
+  );
+}
 
-//     modal.innerHTML = modalContent;
-    
-//     // Show modal with animation
-//     modal.style.opacity = '0';
-//     modal.style.display = 'flex';
-//     document.body.classList.add('modal-open');
-    
-//     void modal.offsetWidth;
-    
-//     modal.style.opacity = '1';
-//     modal.style.transition = 'opacity 0.3s ease';
+// Update the existing switchTab function
+document.addEventListener('click', function (e) {
+  if (e.target.matches('[data-nav-link]')) {
+    [...this.querySelectorAll('[data-nav-link]')].forEach(item => {
+      if (item === e.target) {
+        item.classList.add('active');
+        updateContent(item);
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+});
 
-//   } catch (error) {
-//     console.error('Error loading blog post:', error);
-//     // Handle error - maybe show an error message in the modal
-//   }
-// }
+// Update the existing updateContent function
+function updateContent(button) {
+  const pages = document.querySelectorAll('[data-page]');
+  
+  pages.forEach(page => {
+    if (page.dataset.page === button.textContent.toLowerCase()) {
+      page.classList.add('active');
+      if (page.dataset.page === 'hackathons') {
+        initializeHackathons();
+      }
+    } else {
+      page.classList.remove('active');
+    }
+  });
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+  // Your existing initialization code
+  initializeHackathons();
+});
