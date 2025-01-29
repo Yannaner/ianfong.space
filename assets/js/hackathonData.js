@@ -11,6 +11,6 @@ const hackathonProjects = [
     demoLink: "#",
     githubLink: "#",
     teamMembers: ["Ian Fong", "Team Member 2", "Team Member 3"]
-  },
-  // Add more hackathon projects by copying this structure
-]; 
+  }
+  // Add more hackathon projects here following the same structure
+];

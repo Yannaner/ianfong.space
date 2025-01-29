@@ -143,18 +143,33 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    const clickedText = this.innerHTML.toLowerCase();
+    console.log('Navigation clicked:', clickedText); // Debug log
+
+    // Debug log all pages and their data-page attributes
+    pages.forEach(page => {
+      console.log('Available page:', page.dataset.page);
+    });
 
     for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      const pageType = pages[i].dataset.page;
+      console.log(`Comparing clicked "${clickedText}" with page "${pageType}"`);
+
+      if (clickedText === pageType) {
+        console.log('Match found! Activating page:', pageType);
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
+        
+        if (pageType === 'hackathons') {
+          console.log('Initializing hackathons page');
+          initializeHackathons();
+        }
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
-
   });
 }
 
