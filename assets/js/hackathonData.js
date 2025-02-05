@@ -1,4 +1,5 @@
 const hackathonProjects = [
+  
   {
     id: 1,
     title: "PharmaSee",
@@ -13,7 +14,19 @@ const hackathonProjects = [
     teamMembers: ["Ian Fong", "Chris Jin", "Steven Uy","Omobolaji Alabi"]
   },
   
-  
+  {
+    id: 1,
+    title: "In2ne",
+    event: "Hack@Brown 2025",
+    date: "February 2024",
+    thumbnail: "./assets/images/in2ne.png",
+    // description: "The inspiration behind PharmaSee stems from the alarming rate of medication prescription errors, up to 25% annually. These errors can lead to severe health complications and even fatalities. Our goal with PharmaSee is to bridge the communication gap between doctors, pharmacies, and patients by leveraging technology to ensure medication accuracy and adherence.",
+    technologies: ["Next.js", "React","AWS","Flask","Swarm Agency","Pinecone","FastAPI"],
+    achievement: "",
+    demoLink: "https://devpost.com/software/in2ne",
+    githubLink: "https://github.com/Yannaner/HackBrown25",
+    // teamMembers: ["Ian Fong", "Chris Jin", "Steven Uy","Omobolaji Alabi"]
+  },
   {
     id: 1,
     title: "DataMesh",
