@@ -1,9 +1,17 @@
 const blogPosts = [
   {
+    id: 8,
+    title: "Book Review: The Hard Thing About Hard Things",
+    category: "Book",
+    date: "Feb 5 2025",
+    thumbnail: "./assets/images/hardthing.jpg",
+    link: "https://medium.com/@ianyfong/the-hardest-thing-about-the-hard-thing-lessons-in-leadership-and-survival-8d5da961fdaf"
+  },
+  {
     id: 7,
     title: "My opinion on the rise of DeepSeek & its impact",
     category: "Opinion",
-    date: "Feb 5 2025",
+    date: "Feb 3 2025",
     thumbnail: "./assets/images/deepseek.jpg",
     link: "https://medium.com/@ianyfong/my-opinion-on-the-rise-of-deepseek-afc3e1bf17ad"
   },
@@ -11,7 +19,7 @@ const blogPosts = [
     id: 6,
     title: "What AI will be look like in 2025? My Predictions",
     category: "Opinion",
-    date: "Feb 5 2025",
+    date: "Feb 1 2025",
     thumbnail: "./assets/images/2025prediction.jpg",
     link: "https://medium.com/@ianyfong/ai-in-2025-five-predictions-you-cant-ignore-5be8b9051772"
   },
