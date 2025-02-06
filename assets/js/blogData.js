@@ -1,26 +1,58 @@
 const blogPosts = [
   {
-    id: 1,
-    title: "How Triathlon Shaped Who I Am Today",
+    id: 7,
+    title: "My opinion on the rise of DeepSeek & its impact",
+    category: "Opinion",
+    date: "Feb 5 2025",
+    thumbnail: "./assets/images/deepseek.jpg",
+    link: "https://medium.com/@ianyfong/my-opinion-on-the-rise-of-deepseek-afc3e1bf17ad"
+  },
+  {
+    id: 6,
+    title: "What AI will be look like in 2025? My Predictions",
+    category: "Opinion",
+    date: "Feb 5 2025",
+    thumbnail: "./assets/images/2025prediction.jpg",
+    link: "https://medium.com/@ianyfong/ai-in-2025-five-predictions-you-cant-ignore-5be8b9051772"
+  },
+  {
+    id: 5,
+    title: "My first 36hrs Hackathon",
+    category: "Hackathon",
+    date: "Jan 14 2025",
+    thumbnail: "./assets/images/hackprinceton2.jpg",
+    link: "https://medium.com/@ianyfong/%E7%AC%AC%E4%B8%80%E5%A0%B4-36hr-%E9%BB%91%E5%AE%A2%E6%9D%BE-661cabbf4fc5"
+  },
+  {
+    id: 4,
+    title: "Book Review: Genesis: Artificial Intelligence, Hope, and the Human Spirit",
+    category: "Book",
+    date: "Jan 5 2025",
+    thumbnail: "./assets/images/genesis.jpg",
+    link: "https://medium.com/@ianyfong/rethinking-humanity-in-the-age-of-ai-124a1a9bbee2"
+  },
+  {
+    id: 3,
+    title: "7000小時的開始：從遊戲成癮到找到自我（下）",
     category: "Triathlon",
-    date: "Oct 23 2024",
-    thumbnail: "./assets/images/S__5628001_0.jpg",
-    headerImage: "assets/images/ironman.jpg",
-    content: `
-      <p>Triathlon is more than just a sport. It's an experience that shaped who I am today, turning me from an addictive gamer into a disciplined athlete and, more importantly, a purposeful leader...</p>
-      <!-- Rest of your blog content paragraphs -->
-    `
+    date: "Jan 3 2025",
+    thumbnail: "./assets/images/S__5627993_0.jpg",
+    link: "https://medium.com/@ianyfong/7000%E5%B0%8F%E6%99%82%E7%9A%84%E9%96%8B%E5%A7%8B-%E5%BE%9E%E9%81%8A%E6%88%B2%E6%88%90%E7%99%AE%E5%88%B0%E6%89%BE%E5%88%B0%E8%87%AA%E6%88%91-%E4%B8%8B-f2c68406dffb"
   },
   {
     id: 2,
-    title: "My First Hackathon Win",
-    category: "Hackathon",
-    date: "Nov 10 2024",
-    thumbnail: "./assets/images/hackprinceton2.jpg",
-    headerImage: "assets/images/hackprinceton2.jpg",
-    content: `
-      <p>Your hackathon blog content here...</p>
-    `
-  }
-  // Add more blog posts here
-]; 
+    title: "7000小時的開始：從遊戲成癮到找到自我（中）",
+    category: "Triathlon",
+    date: "Jan 1 2025",
+    thumbnail: "./assets/images/S__5627995_0.jpg",
+    link: "https://medium.com/@ianyfong/7000%E5%B0%8F%E6%99%82%E7%9A%84%E9%96%8B%E5%A7%8B-%E5%BE%9E%E9%81%8A%E6%88%B2%E6%88%90%E7%99%AE%E5%88%B0%E6%89%BE%E5%88%B0%E8%87%AA%E6%88%91-%E4%B8%AD-b93f85059a4f"
+  },
+  {
+    id: 1,
+    title: "7000小時的開始：從遊戲成癮到找到自我（上）",
+    category: "Triathlon",
+    date: "Dec 31 2024",
+    thumbnail: "./assets/images/S__5628001_0.jpg",
+    link: "https://medium.com/@ianyfong/7000%E5%B0%8F%E6%99%82%E7%9A%84%E9%96%8B%E5%A7%8B-%E5%BE%9E%E9%81%8A%E6%88%B2%E6%88%90%E7%99%AE%E5%88%B0%E6%89%BE%E5%88%B0%E8%87%AA%E6%88%91-%E4%B8%8A-60535e93d675"
+  },
+];

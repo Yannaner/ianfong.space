@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderBlogPosts() {
     blogPostsList.innerHTML = blogPosts.map(post => `
       <li class="blog-post-item" data-post-id="${post.id}">
-        <a href="#">
+        <a href="${post.link}" target="_blank">
           <figure class="blog-banner-box">
             <img src="${post.thumbnail}" alt="${post.title}" loading="lazy">
           </figure>
@@ -197,46 +197,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
       </li>
     `).join('');
-
-    // Add click handlers to blog posts
-    document.querySelectorAll('.blog-post-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const postId = parseInt(item.dataset.postId);
-        openBlogPost(postId);
-      });
-    });
   }
 
-  // Open blog post modal
-  function openBlogPost(postId) {
-    const post = blogPosts.find(p => p.id === postId);
-    if (!post) return;
-
-    const modalContent = modal.querySelector('.modal-content');
-    modalContent.querySelector('.blog-category').textContent = post.category;
-    modalContent.querySelector('time').textContent = post.date;
-    modalContent.querySelector('h2').textContent = post.title;
-    modalContent.querySelector('.modal-header-image').src = post.headerImage;
-    modalContent.querySelector('.modal-body').innerHTML = post.content;
-
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-
-  // Close modal
-  function closeModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-
-  // Event listeners
-  modal.querySelector('.close-button').addEventListener('click', closeModal);
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // Initialize blog posts
   renderBlogPosts();
 });
 
