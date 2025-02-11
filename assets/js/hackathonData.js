@@ -1,5 +1,17 @@
 const hackathonProjects = [
-  
+  {
+    id: 1,
+    title: "Coupn",
+    event: "HackNYU 2025",
+    date: "February 2025",
+    thumbnail: "./assets/images/coupn.png",
+    description: "Coupn is built to help you save money by finding promo codes hidden in your email. We noticed many people ignore promo emails and existing promo code tools just don't work. Coupn fixes that by automatically scanning your promotion emails, finding the best deals, and showing them to you",
+    technologies: ["Next.js", "Supabase","Gemini","Google cloud","OCR"],
+    achievement: "",
+    demoLink: "https://www.youtube.com/watch?v=vV4pUpTNVnE",
+    githubLink: "https://devpost.com/software/coupn",
+    teamMembers: ["Ian Fong", "Tom Zheng", "Ken Cheng"]
+  },
   {
     id: 1,
     title: "PharmaSee",
@@ -18,7 +30,7 @@ const hackathonProjects = [
     id: 1,
     title: "In2ne",
     event: "Hack@Brown 2025",
-    date: "February 2024",
+    date: "February 2025",
     thumbnail: "./assets/images/in2ne.png",
     description: "",
     technologies: ["Next.js", "React","AWS","Flask","Swarm Agency","Pinecone","FastAPI"],
