@@ -1,5 +1,21 @@
 const blogPosts = [
   {
+    id: 10,
+    title: "Introducing the AI Co-Scientist Agent: My Take on Google’s Latest Leap in Research Collaboration.",
+    category: "opinion",
+    date: "Feb 20 2025",
+    thumbnail: "./assets/images/GoogleAgentic.jpg",
+    link: "https://medium.com/@ianyfong/introducing-the-ai-co-scientist-agent-my-take-on-googles-latest-leap-in-research-collaboration-86c6dfda9d44"
+  },
+  {
+    id: 9,
+    title: "What I Learned from Attending Four Hackathons in a Row",
+    category: "hackathon",
+    date: "Feb 10 2025",
+    thumbnail: "./assets/images/fourhackathon.jpg",
+    link: "https://medium.com/@ianyfong/the-hardest-thing-about-the-hard-thing-lessons-in-leadership-and-survival-8d5da961fdaf"
+  },
+  {
     id: 8,
     title: "Book Review: The Hard Thing About Hard Things",
     category: "Book",
