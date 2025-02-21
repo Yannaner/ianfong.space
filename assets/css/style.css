@@ -2017,20 +2017,43 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .project-title {
-  font-size: var(--fs-4);
-  margin-bottom: 0.5rem;
+  font-size: var(--fs-2);  /* Increased font size */
+  margin-bottom: 0.8rem;
+  color: var(--orange-yellow-crayola); /* Highlighted color */
+  font-weight: var(--fw-600); /* Made text bolder */
+  letter-spacing: 0.5px; /* Added letter spacing */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-title:hover {
+  color: var(--vegas-gold); /* Color change on hover */
 }
 
 .project-event {
-  color: var(--primary);
-  font-size: var(--fs-6);
-  margin-bottom: 0.5rem;
+  color: var(--orange-yellow-crayola); /* Match title color */
+  font-size: var(--fs-4); /* Slightly larger font size */
+  margin-bottom: 0.8rem;
+  font-weight: var(--fw-500); /* Medium weight */
+  letter-spacing: 0.5px; /* Added letter spacing */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.project-achievement {
+.project-event:hover {
+  color: var(--vegas-gold); /* Color change on hover */
+}
+
+/* Achievement styling - only show if not empty */
+.project-achievement:not(:empty) {
+  background: linear-gradient(45deg, 
+    rgba(255, 215, 0, 0.1), 
+    rgba(255, 215, 0, 0.2)
+  );
+  border-left: 4px solid var(--vegas-gold);
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 0 8px 8px 0;
   color: var(--vegas-gold);
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-weight: var(--fw-500);
 }
 
 .project-tech {
@@ -2040,43 +2063,31 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin: 1rem 0;
 }
 
-.tech-tag {
-  background: var(--primary);
-  color: var(--white);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: var(--fs-7);
-}
 
+
+/* Project links styling */
 .project-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .demo-link,
 .github-link {
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  background: var(--jet);
+  color: var(--orange-yellow-crayola);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: var(--fs-7);
+  transition: var(--transition-1);
   text-decoration: none;
-  transition: opacity 0.3s;
-}
-
-.demo-link {
-  background: var(--primary);
-  color: var(--white);
-}
-
-.github-link {
-  background: var(--background-primary);
-  color: var(--text-color);
 }
 
 .demo-link:hover,
 .github-link:hover {
-  opacity: 0.8;
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
-
 .project-metadata {
   display: flex;
   gap: 1rem;
@@ -2163,6 +2174,15 @@ body {
   font-size: 1em;
   color: #bbbbbb;
 }
+
+.tech-tag {
+  background: var(--eerie-black-1);
+  color: var(--orange-yellow-crayola);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-5);
+}
+
 
 .modal {
   display: none;

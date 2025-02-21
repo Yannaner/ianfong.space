@@ -47,7 +47,7 @@ const hackathonProjects = [
     thumbnail: "./assets/images/datamesh.png",
     description: "DataMesh — the innovative solution that lets you turn your everyday purchases into a source of income! By uploading your grocery and retail receipts to our decentralized platform, you can earn stablecoins while helping build a more secure and transparent financial ecosystem. Whether you're shopping for essentials or treating yourself, every transaction matters!",
     technologies: ["Next.js", "React","Web3","Render Hosting","MongoDB","OrbitDB", "OCR"],
-    achievement: "",
+    achievement: "2nd Place in Student Track",
     demoLink: "https://www.youtube.com/watch?v=aw9_EpVe_Qo",
     githubLink: "https://github.com/Datamesh-Solana/DataMesh",
     teamMembers: ["Ian Fong", "DIVIJ", "Belenko","Sheng","Rojeng"]
