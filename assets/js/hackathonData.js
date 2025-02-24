@@ -1,6 +1,19 @@
 const hackathonProjects = [
   {
     id: 1,
+    title: "TurkEye",
+    event: "Harvard Live AI 2025",
+    date: "February 2025",
+    thumbnail: "./assets/images/turkeye.png",
+    description: "TurkEye is a Chrome extension that blocks AI-generated deepfakes, explicit content, and fake news.",
+    technologies: ["Google cloud","Huggingface","javascript","python","OCR","Model finetune"],
+    achievement: "",
+    demoLink: "https://www.youtube.com/watch?v=J68gHvVtBZI&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=Mjg2NjY",
+    githubLink: "https://devpost.com/software/turkeye?ref_content=user-portfolio&ref_feature=in_progress",
+    teamMembers: ["Ian Fong", "Jessica Wang", "Joanna Wang","Khagendra Khatri"]
+  },
+  {
+    id: 1,
     title: "Coupn",
     event: "HackNYU 2025",
     date: "February 2025",
