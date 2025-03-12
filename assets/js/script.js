@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Initialize hackathon projects if on hackathon page
+  //  hackathon projects if on hackathon page
   if (hackathonList) {
     renderHackathonProjects();
   }
