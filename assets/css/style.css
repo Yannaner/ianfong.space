@@ -1,55 +1,54 @@
 :root {
 
   /**
-   * colors
+   * colors - Stanford red theme
    */
 
   /* gradient */
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(220, 80%, 45%) 3%, /* Vibrant blue */
-    hsl(220, 90%, 30%) 97% /* Deep electric blue */
+    hsl(0, 74%, 31%) 3%, /* Stanford red */
+    hsl(0, 74%, 22%) 97% /* Darker Stanford red */
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(220, 80%, 40%, 0.4) 0%,
-    hsla(220, 90%, 25%, 0) 100%
-  ), hsl(220, 80%, 25%);
-  --bg-gradient-yellow-1: linear-gradient(
+    hsla(0, 74%, 31%, 0.4) 0%,
+    hsla(0, 74%, 22%, 0) 100%
+  ), hsl(0, 74%, 15%);
+  --bg-gradient-red-1: linear-gradient(
     to bottom right, 
-    hsl(220, 90%, 50%) 0%, /* Neon blue */
-    hsla(220, 80%, 45%, 0) 50%
+    hsl(0, 74%, 31%) 0%, /* Stanford red */
+    hsla(0, 74%, 31%, 0) 50%
   );
-  --bg-gradient-yellow-2: linear-gradient(
+  --bg-gradient-red-2: linear-gradient(
     135deg, 
-    hsla(220, 90%, 50%, 0.4) 0%,
-    hsla(220, 80%, 40%, 0) 59.86%
-  ), hsl(220, 80%, 25%);
+    hsla(0, 74%, 31%, 0.4) 0%,
+    hsla(0, 74%, 20%, 0) 59.86%
+  ), hsl(0, 74%, 15%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(220, 80%, 45%) 0%, /* Bright blue border */
-    hsla(220, 80%, 40%, 0) 50%
+    hsl(0, 74%, 31%) 0%, /* Stanford red border */
+    hsla(0, 74%, 31%, 0) 50%
   );
-  --text-gradient-yellow: linear-gradient(
+  --text-gradient-red: linear-gradient(
     to right, 
-    hsl(220, 100%, 85%), /* Soft sky blue */
-    hsl(220, 90%, 75%) /* Lighter neon blue */
+    hsl(0, 74%, 75%), /* Lighter Stanford red */
+    hsl(0, 74%, 60%) /* Light Stanford red */
   );
 
   /* solid */
-
-  --jet: hsl(220, 40%, 15%);
-  --onyx: hsl(220, 40%, 12%);
-  --eerie-black-1: hsl(220, 40%, 10%);
-  --eerie-black-2: hsl(220, 40%, 8%);
-  --smoky-black: hsl(220, 50%, 6%);
-  --white-1: hsl(220, 15%, 95%);
-  --white-2: hsl(220, 15%, 92%);
-  --orange-yellow-crayola: hsl(220, 90%, 70%);
-  --vegas-gold: hsl(220, 80%, 60%);
-  --light-gray: hsl(220, 15%, 84%);
-  --light-gray-70: hsla(220, 15%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(220, 70%, 55%);
+  --jet: hsl(0, 10%, 15%);
+  --onyx: hsl(0, 10%, 12%);
+  --eerie-black-1: hsl(0, 10%, 10%);
+  --eerie-black-2: hsl(0, 10%, 8%);
+  --smoky-black: hsl(0, 10%, 6%);
+  --white-1: hsl(0, 0%, 95%);
+  --white-2: hsl(0, 0%, 92%);
+  --stanford-red: hsl(0, 74%, 31%); /* #8C1515 Stanford Cardinal Red */
+  --stanford-light-red: hsl(352, 50%, 48%); /* #B83A4B Lighter red */
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 60%, 50%);
 
   /**
    * typography
@@ -126,11 +125,11 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var(--stanford-red);
   color: var(--smoky-black);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--stanford-red); }
 
 html { font-family: var(--ff-poppins); }
 
@@ -171,7 +170,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  color: var(--stanford-red);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -230,7 +229,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-red);
   border-radius: 3px;
 }
 
@@ -245,7 +244,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--stanford-red);
   border-radius: 5px;
 }
 
@@ -339,7 +338,7 @@ main {
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
-  color: var(--orange-yellow-crayola);
+  color: var(--stanford-red);
   background: var(--border-gradient-onyx);
   padding: 10px;
   box-shadow: var(--shadow-2);
@@ -358,10 +357,10 @@ main {
 }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus { background: var(--bg-gradient-red-1); }
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before { background: var(--bg-gradient-red-2); }
 
 .info_more-btn span { display: none; }
 
@@ -464,7 +463,7 @@ main {
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { color: var(--stanford-red); }
 
 
 
@@ -841,7 +840,7 @@ img[src*="sourcelimit"]:hover {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-red);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -885,7 +884,7 @@ img[src*="sourcelimit"]:hover {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-red);
   height: 100%;
   border-radius: inherit;
 }
@@ -1003,7 +1002,7 @@ img[src*="sourcelimit"]:hover {
   --scale: 0.8;
 
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--stanford-red);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1212,7 +1211,7 @@ img[src*="sourcelimit"]:hover {
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.blog-post-item > a:hover .blog-item-title { color: var(--stanford-red); }
 
 .blog-text {
   color: var(--light-gray);
@@ -1271,7 +1270,7 @@ img[src*="sourcelimit"]:hover {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
+.form-input:focus { border-color: var(--stanford-red); }
 
 textarea.form-input {
   min-height: 100px;
@@ -1289,7 +1288,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--stanford-red);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1315,9 +1314,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover { background: var(--bg-gradient-red-1); }
 
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+.form-btn:hover::before { background: var(--bg-gradient-red-2); }
 
 .form-btn:disabled {
   opacity: 0.7;
@@ -1730,7 +1729,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button:hover { color: var(--light-gray-70); }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+  .filter-item button.active { color: var(--stanford-red); }
 
   /* portfolio and blog grid */
 
@@ -1992,24 +1991,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .hackathon-project-item {
-  margin-bottom: 2rem;
-}
-
-.project-card {
-  background: var(--background-secondary);
-  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.hackathon-project-item:hover {
   transform: translateY(-5px);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(140, 21, 21, 0.2);
 }
 
 .project-info {
@@ -2017,43 +2009,39 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .project-title {
-  font-size: var(--fs-2);  /* Increased font size */
+  font-size: var(--fs-2);
   margin-bottom: 0.8rem;
-  color: var(--orange-yellow-crayola); /* Highlighted color */
-  font-weight: var(--fw-600); /* Made text bolder */
-  letter-spacing: 0.5px; /* Added letter spacing */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.project-title:hover {
-  color: var(--vegas-gold); /* Color change on hover */
+  color: var(--stanford-red);
+  font-weight: var(--fw-600);
+  letter-spacing: 0.5px;
 }
 
 .project-event {
-  color: var(--orange-yellow-crayola); /* Match title color */
-  font-size: var(--fs-4); /* Slightly larger font size */
+  color: var(--stanford-light-red);
+  font-size: var(--fs-4);
   margin-bottom: 0.8rem;
-  font-weight: var(--fw-500); /* Medium weight */
-  letter-spacing: 0.5px; /* Added letter spacing */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  font-weight: var(--fw-500);
 }
 
-.project-event:hover {
-  color: var(--vegas-gold); /* Color change on hover */
-}
-
-/* Achievement styling - only show if not empty */
+/* Achievement styling - cleaner design */
 .project-achievement:not(:empty) {
   background: linear-gradient(45deg, 
-    rgba(255, 215, 0, 0.1), 
-    rgba(255, 215, 0, 0.2)
+    rgba(140, 21, 21, 0.1), 
+    rgba(140, 21, 21, 0.2)
   );
-  border-left: 4px solid var(--vegas-gold);
+  border-left: 4px solid var(--stanford-red);
   padding: 10px 15px;
   margin: 15px 0;
   border-radius: 0 8px 8px 0;
-  color: var(--vegas-gold);
+  color: var(--stanford-light-red);
   font-weight: var(--fw-500);
+}
+
+.project-description {
+  margin: 1rem 0;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
 }
 
 .project-tech {
@@ -2063,19 +2051,27 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin: 1rem 0;
 }
 
-
+.tech-tag {
+  background: var(--onyx);
+  color: var(--stanford-red);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-7);
+  margin-bottom: 5px;
+}
 
 /* Project links styling */
 .project-links {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .demo-link,
 .github-link {
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--stanford-red);
   padding: 8px 16px;
   border-radius: 8px;
   font-size: var(--fs-7);
@@ -2085,20 +2081,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .demo-link:hover,
 .github-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-.project-metadata {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
+  background: var(--stanford-red);
+  color: var(--white-1);
 }
 
-.project-date {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-}
-
+/* Team members styling */
 .team-members {
   margin: 1rem 0;
   font-size: var(--fs-6);
@@ -2106,137 +2093,161 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .team-member {
   display: inline-block;
-  background: var(--background-primary);
+  background: var(--jet);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   margin: 0.2rem;
+  font-size: var(--fs-7);
 }
 
-.team-members p {
-  margin-bottom: 0.5rem;
-  color: var(--light-gray);
-}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 400px) {
+  :root {
+    --fs-1: 22px;
+    --fs-2: 17px;
+    --fs-3: 16px;
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+  }
 
-/* General styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #464343;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
+  .sidebar, article {
+    padding: 20px 15px;
+  }
 
-.hackathon-projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.project-item {
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.3s ease;
+  .navbar-link {
+    padding: 15px 5px;
+  }
   
+  .project-links {
+    flex-direction: column;
+  }
 }
 
-.project-item:hover {
-  transform: scale(1.05);
-}
+/* Update other media query breakpoints for better responsiveness */
+// ...existing code...
 
-.project-img {
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-}
-
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-
-.project-category {
-  font-size: 1em;
-  color: #bbbbbb;
-}
-
-.tech-tag {
-  background: var(--eerie-black-1);
-  color: var(--orange-yellow-crayola);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: var(--fs-5);
-}
-
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal.active {
-  display: flex;
-  justify-content: center; /* Center the modal horizontally */
-  align-items: center; /* Center the modal vertically */
-}
-
+/* Remove modal outline for cleaner look */
 .modal-content {
-  background-color: #1e1e1e;
+  background-color: var(--eerie-black-1);
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 1px solid var(--jet);
+  width: 90%;
   max-width: 700px;
-  max-height: 80%; /* Limit the height */
-  overflow-y: auto; /* Add vertical scroll if content overflows */
-  border-radius: 8px;
-  color: #ffffff;
+  max-height: 85%;
+  overflow-y: auto;
+  border-radius: 12px;
+  color: var(--white-1);
   display: flex;
   flex-direction: column;
-  outline: 200px solid #ffffff; /* Add a clear outline */
+  outline: none;
 }
 
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Hackathon project text color improvements */
+.project-title {
+  font-size: var(--fs-2);
+  margin-bottom: 0.8rem;
+  color: #ffffff; /* Bright white for higher contrast */
+  font-weight: var(--fw-600);
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for better legibility */
 }
 
-.close-button:hover,
-.close-button:focus {
-  color: #ffffff;
+.project-event {
+  color: #ffcccc; /* Light pink-red for event name */
+  font-size: var(--fs-4);
+  margin-bottom: 0.8rem;
+  font-weight: var(--fw-500);
+}
+
+.project-date {
+  color: #e6e6e6; /* Light gray with better visibility */
+  font-weight: var(--fw-400);
+}
+
+.project-achievement:not(:empty) {
+  background: linear-gradient(45deg, 
+    rgba(140, 21, 21, 0.2), 
+    rgba(140, 21, 21, 0.3)
+  );
+  border-left: 4px solid #ff6666; /* Brighter red border */
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 0 8px 8px 0;
+  color: #ffe6e6; /* Very light pink */
+  font-weight: var(--fw-500);
+}
+
+.project-description {
+  margin: 1rem 0;
+  color: #f2f2f2; /* Off-white for better readability */
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
+
+/* Technology tags with improved visibility */
+.tech-tag {
+  background: rgba(140, 21, 21, 0.25); /* Semi-transparent Stanford red */
+  color: #ffffff; /* White text */
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: var(--fs-7);
+  margin-bottom: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+/* Team members with improved visibility */
+.team-member {
+  display: inline-block;
+  background: rgba(140, 21, 21, 0.3); /* Semi-transparent Stanford red */
+  color: #ffffff; /* White text */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  font-size: var(--fs-7);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+/* Project links with improved visibility */
+.demo-link,
+.github-link {
+  background: var(--stanford-red);
+  color: #ffffff; /* White text */
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: var(--fs-7);
+  transition: var(--transition-1);
   text-decoration: none;
-  cursor: pointer;
+  font-weight: var(--fw-500);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-.project-links a {
-  color: #1e90ff;
-  text-decoration: none;
-  margin-right: 10px;
+.demo-link:hover,
+.github-link:hover {
+  background: #a01c1c; /* Darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-.project-links a:hover {
-  text-decoration: underline;
+/* Team members header text */
+.team-members p {
+  color: #ffcccc; /* Light pink-red */
+  font-weight: var(--fw-500);
+  margin-bottom: 0.5rem;
+}
+
+/* Technology header text */
+.project-tech p {
+  color: #ffcccc; /* Light pink-red */
+  font-weight: var(--fw-500);
+  margin-bottom: 0.5rem;
+}
+
+/* Add a subtle hover effect to project cards */
+.hackathon-project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(140, 21, 21, 0.3);
+  border-color: rgba(255, 102, 102, 0.5); /* Brighter red border on hover */
 }

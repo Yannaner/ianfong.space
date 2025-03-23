@@ -1,11 +1,7 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -13,8 +9,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -52,8 +46,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -113,8 +105,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -133,8 +123,6 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
-
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -296,7 +284,6 @@ function initializeHackathons() {
   projectsList.innerHTML = hackathonProjects.map(project => `
     <li class="hackathon-project-item">
       <div class="project-card">
-        <img src="${project.thumbnail}" alt="${project.title}" class="project-image">
         <div class="project-info">
           <h3 class="project-title">${project.title}</h3>
           <div class="project-metadata">
@@ -317,8 +304,8 @@ function initializeHackathons() {
             `).join('')}
           </div>
           <div class="project-links">
-            <a href="${project.demoLink}" class="demo-link">Live Demo</a>
-            <a href="${project.githubLink}" class="github-link">GitHub</a>
+            <a href="${project.demoLink}" target="_blank" class="demo-link">Live Demo</a>
+            <a href="${project.githubLink}" target="_blank" class="github-link">GitHub</a>
           </div>
         </div>
       </div>
