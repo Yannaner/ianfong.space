@@ -1,6 +1,19 @@
 const hackathonProjects = [
   {
     id: 1,
+    title: "MedEx",
+    event: "MIT Grand Hack 2025",
+    date: "March 2025",
+    thumbnail: "./assets/images/trueconsensus.png",
+    description: "An automation tool that enhances pharmacists' patient care by eliminating the need to call insurance companies for medication authorizations.",
+    technologies: ["Retell","Vite","React","TailwindCSS","Nest.js","Vercel"],
+    achievement: "3rd Place in Transformative Intelligence",
+    demoLink: "https://youtu.be/xPrYNFir1h4",
+    githubLink: "https://github.com/Yannaner/MIT-GH2025",
+    teamMembers: ["Ian Fong", "Thomas Tam","Rayan Bachaoui","Thibault Heintz","Abhiruchi Mehta"]
+  },
+  {
+    id: 1,
     title: "TrueConsensus",
     event: "Hack Knight 2025",
     date: "March 2025",
