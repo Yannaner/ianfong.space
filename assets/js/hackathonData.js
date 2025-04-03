@@ -1,6 +1,19 @@
 const hackathonProjects = [
   {
     id: 1,
+    title: "BrainLabs",
+    event: "Hack PSU 2025",
+    date: "March 2025",
+    thumbnail: "./assets/images/trueconsensus.png",
+    description: "Basically a physical learning network",
+    technologies: ["Arduino","PySerial","Vite","React","Ngork","Nest.js","Vercel","Firebase"],
+    achievement: "3rd Place Overall",
+    demoLink: "https://www.youtube.com/watch?v=sG_KVpkztmY",
+    githubLink: "https://github.com/Yannaner/HackPSU2025_BrainLab",
+    teamMembers: ["Ian Fong", "Gary Gao"]
+  },
+  {
+    id: 1,
     title: "MedEx",
     event: "MIT Grand Hack 2025",
     date: "March 2025",
