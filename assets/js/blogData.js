@@ -1,5 +1,13 @@
 const blogPosts = [
   {
+    id: 11,
+    title: "9 Hackathons in 12 Weeks: 9 Things I Learned the Hard Way.",
+    category: "hackathon",
+    date: "April 14 2025",
+    thumbnail: "./assets/images/hackpsu.jpg",
+    link: "https://medium.com/@ianyfong/9-hackathons-in-12-weeks-9-things-i-learned-the-hard-way-5ddfeac9b051"
+  },
+  {
     id: 10,
     title: "Introducing the AI Co-Scientist Agent: My Take on Google’s Latest Leap in Research Collaboration.",
     category: "opinion",
