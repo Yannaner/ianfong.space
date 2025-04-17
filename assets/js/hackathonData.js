@@ -1,6 +1,19 @@
 const hackathonProjects = [
   {
     id: 1,
+    title: "Qubikel",
+    event: "Bitcamp 2025",
+    date: "April 2025",
+    thumbnail: "./assets/images/trueconsensus.png",
+    description: "A quantum powered bike rental simulator.",
+    technologies: ["Arduino","PySerial","Vite","React","Ngork","Nest.js","Vercel","Firebase"],
+    achievement: "2nd Place in Quantum Track",
+    demoLink: "https://www.youtube.com/watch?v=VcBaGfBvTGo&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=OTY3MTQ",
+    githubLink: "https://github.com/Yannaner/BitCamp-2025",
+    teamMembers: ["Ian Fong", "Ariji Chakma","Safa Obuz"]
+  },
+  {
+    id: 1,
     title: "BrainLabs",
     event: "Hack PSU 2025",
     date: "March 2025",
