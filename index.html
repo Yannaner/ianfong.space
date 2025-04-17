@@ -18,9 +18,192 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Add a custom style block for quick overrides and enhancements -->
+  <style>
+    body {
+      transition: background 0.4s, color 0.4s;
+    }
+    .avatar-box {
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #e74c3c;
+      box-shadow: 0 4px 24px rgba(231, 76, 60, 0.15);
+      width: 110px;
+      height: 110px;
+      margin: 0 auto;
+      transition: box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #8C1515 60%, #e74c3c 100%);
+    }
+    .avatar-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      transition: transform 0.3s;
+    }
+    .avatar-box:hover {
+      box-shadow: 0 8px 32px rgba(231, 76, 60, 0.25);
+    }
+    .avatar-box:hover img {
+      transform: scale(1.06) rotate(-2deg);
+    }
+    .info-content .name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      animation: popIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      80% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .info-content .title {
+      color: #fff;
+      background: #8C1515;
+      border-radius: 8px;
+      padding: 4px 14px;
+      margin: 0.3em auto;
+      width: fit-content;
+      font-size: 1rem;
+      font-weight: 400;
+      box-shadow: 0 2px 8px rgba(140,21,21,0.08);
+    }
+    .icon-box {
+      background: linear-gradient(135deg, #8C1515 60%, #e74c3c 100%);
+      color: #fff;
+      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 2px 8px rgba(140,21,21,0.08);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .icon-box:hover {
+      background: #fff;
+      color: #e74c3c;
+      transform: scale(1.08) rotate(-6deg);
+    }
+    .social-link {
+      color: #fff;
+      background: #8C1515;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(140,21,21,0.08);
+    }
+    .social-link:hover {
+      background: #fff;
+      color: #e74c3c;
+      transform: scale(1.12) rotate(8deg);
+    }
+    .navbar-link {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.2s;
+    }
+    .navbar-link:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(231,76,60,0.15);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s;
+      z-index: -1;
+    }
+    .navbar-link:active:after {
+      width: 120px;
+      height: 120px;
+      transition: 0s;
+    }
+    .navbar-link.active, .navbar-link:hover {
+      color: #e74c3c !important;
+    }
+    /* Theme toggle button */
+    .theme-toggle-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #fff;
+      color: #8C1515;
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 2px 8px rgba(140,21,21,0.08);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      z-index: 100;
+    }
+    .theme-toggle-btn:hover {
+      background: #8C1515;
+      color: #fff;
+    }
+    /* Light theme styles */
+    body.light-theme {
+      background: #f7f7f7;
+      color: #222;
+    }
+    body.light-theme .sidebar,
+    body.light-theme article {
+      background: #fff;
+      border-color: #eee;
+      box-shadow: 0 4px 24px rgba(140,21,21,0.06);
+    }
+    body.light-theme .info-content .name {
+      color: #8C1515;
+    }
+    body.light-theme .info-content .title,
+    body.light-theme .icon-box,
+    body.light-theme .social-link {
+      background: #f7f7f7;
+      color: #8C1515;
+    }
+    body.light-theme .icon-box:hover,
+    body.light-theme .social-link:hover {
+      background: #8C1515;
+      color: #fff;
+    }
+    body.light-theme .navbar-link.active,
+    body.light-theme .navbar-link:hover {
+      color: #8C1515 !important;
+    }
+    /* Add more light theme overrides as needed */
+  </style>
 </head>
 
 <body>
+
+  <!-- Theme toggle button -->
+  <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle light/dark mode">
+    <i class="fa-solid fa-sun"></i>
+  </button>
 
   <!--
     - #MAIN
@@ -42,11 +225,17 @@
 
         <div class="info-content">
           <h1 class="name" title="Ian Fong">Ian Fong</h1>
-          <h4 class="title">Math & CS</h4>
-          <!-- <h4 class="title">Software Developer</h4> -->
-          <p class="title">AI Engineer, Backend Developer</p>
-          <p class="title">Triathlete</p>
-          
+          <div class="profile-badges">
+            <span class="profile-badge" title="Math & Computer Science">
+              <i class="fa-solid fa-calculator"></i> Math &amp; CS
+            </span>
+            <span class="profile-badge" title="AI Engineer, Backend Developer">
+              <i class="fa-solid fa-brain"></i> AI Engineer, Backend Developer
+            </span>
+            <span class="profile-badge" title="Triathlete">
+              <i class="fa-solid fa-person-running"></i> Triathlete
+            </span>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -830,6 +1019,21 @@
   <script src="./assets/js/blogData.js"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/hackathonData.js"></script>
+  <script>
+    // Theme toggle logic
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const icon = themeBtn.querySelector('i');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      if (document.body.classList.contains('light-theme')) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+    });
+  </script>
   
 </body>
 

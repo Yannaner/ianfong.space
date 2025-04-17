@@ -37,18 +37,18 @@
   );
 
   /* solid */
-  --jet: hsl(0, 10%, 15%);
-  --onyx: hsl(0, 10%, 12%);
+  --jet: #2d2d2d;
+  --onyx: #232323;
   --eerie-black-1: hsl(0, 10%, 10%);
   --eerie-black-2: hsl(0, 10%, 8%);
-  --smoky-black: hsl(0, 10%, 6%);
-  --white-1: hsl(0, 0%, 95%);
-  --white-2: hsl(0, 0%, 92%);
-  --stanford-red: hsl(0, 74%, 31%); /* #8C1515 Stanford Cardinal Red */
-  --stanford-light-red: hsl(352, 50%, 48%); /* #B83A4B Lighter red */
-  --light-gray: hsl(0, 0%, 84%);
+  --smoky-black: #181818;
+  --white-1: #f7f7f7;
+  --white-2: #fff;
+  --stanford-red: #8C1515;
+  --stanford-light-red: #e74c3c;
+  --light-gray: #e0e0e0;
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 60%, 50%);
+  --bittersweet-shimmer: #e74c3c;
 
   /**
    * typography
@@ -133,9 +133,49 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { 
+  background: linear-gradient(135deg, #232323 0%, #8C1515 100%);
+  color: var(--white-1);
+  transition: background 0.4s, color 0.4s;
+}
 
-
+/* Light theme improvements */
+body.light-theme {
+  background: #f8f9fa;
+  color: #181818;
+}
+body.light-theme .sidebar,
+body.light-theme article {
+  background: #fff;
+  border-color: #e0e0e0;
+  color: #181818;
+  box-shadow: 0 4px 24px rgba(140,21,21,0.06);
+}
+body.light-theme .info-content .name {
+  color: #222;
+}
+body.light-theme .profile-badge {
+  background: #f3f3f3;
+  color: #8C1515;
+  border: 1px solid #e0e0e0;
+}
+body.light-theme .profile-badge i {
+  color: #e74c3c;
+}
+body.light-theme .icon-box,
+body.light-theme .social-link {
+  background: #f3f3f3;
+  color: #8C1515;
+}
+body.light-theme .icon-box:hover,
+body.light-theme .social-link:hover {
+  background: #8C1515;
+  color: #fff;
+}
+body.light-theme .navbar-link.active,
+body.light-theme .navbar-link:hover {
+  color: #8C1515 !important;
+}
 
 
 
@@ -151,6 +191,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: background 0.4s, color 0.4s, box-shadow 0.3s;
 }
 
 .separator {
@@ -173,6 +214,7 @@ article {
   color: var(--stanford-red);
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: background 0.4s, color 0.4s, box-shadow 0.3s;
 }
 
 .icon-box::before {
@@ -272,6 +314,48 @@ article.active {
 
 
 
+/* Profile badges for Math & CS, AI Engineer, etc. */
+.profile-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  justify-content: center;
+  margin: 0.7em 0 0.5em 0;
+}
+.profile-badge {
+  display: flex;
+  align-items: center;
+  background: #232323;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.92em;
+  border-radius: 999px;
+  padding: 0.18em 0.85em 0.18em 0.7em;
+  box-shadow: 0 1px 4px rgba(140,21,21,0.06);
+  border: 1px solid #e74c3c;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.7;
+}
+.profile-badge i {
+  margin-right: 0.45em;
+  color: #e74c3c;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+.profile-badge:hover {
+  background: #fff;
+  color: #8C1515;
+  box-shadow: 0 4px 16px rgba(231,76,60,0.10);
+  border-color: #8C1515;
+}
+.profile-badge:hover i {
+  color: #8C1515;
+}
+
 
 
 /*-----------------------------------*\
@@ -285,6 +369,27 @@ main {
 }
 
 
+
+/* Tech stack badges for hackathons */
+.tech-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #8C1515 70%, #e74c3c 100%);
+  color: #fff;
+  padding: 0.25em 0.9em;
+  border-radius: 999px;
+  font-size: 0.95em;
+  margin: 0.15em 0.3em 0.15em 0;
+  border: 1px solid #e74c3c;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(140,21,21,0.08);
+  vertical-align: middle;
+  transition: background 0.2s, color 0.2s;
+}
+.tech-tag:hover {
+  background: #fff;
+  color: #8C1515;
+  border-color: #8C1515;
+}
 
 
 
@@ -307,11 +412,6 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-}
-
-.avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
 }
 
 .info-content .name {
@@ -419,6 +519,7 @@ main {
 .social-item .social-link {
   color: var(--light-gray-70);
   font-size: 18px;
+  transition: background 0.4s, color 0.4s, box-shadow 0.3s;
 }
 
 
@@ -1070,13 +1171,18 @@ img[src*="sourcelimit"]:hover {
 }
 
 .modal-content {
-  position: relative;
-  background-color: var(--background-secondary);
-  margin: 2rem auto;
-  padding: 2rem;
+  background-color: var(--eerie-black-1);
+  padding: 20px;
+  border: 1px solid var(--jet);
   width: 90%;
-  max-width: 800px;
-  border-radius: 15px;
+  max-width: 700px;
+  max-height: 85%;
+  overflow-y: auto;
+  border-radius: 12px;
+  color: var(--white-1);
+  display: flex;
+  flex-direction: column;
+  outline: none;
 }
 
 .close-button {
@@ -1443,13 +1549,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .info_content .name { margin-bottom: 15px; }
 
-  .avatar-box img { width: 120px; }
-
-  .info-content .name { margin-bottom: 15px; }
-
-  .info-content .title { padding: 5px 18px; }
+  .info_content .title { padding: 5px 18px; }
 
   .info_more-btn {
     top: -30px;
@@ -1944,14 +2046,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
-
-  .info-content .name {
+  .info_content .name {
     white-space: nowrap;
     text-align: center;
   }
 
-  .info-content .title { margin: auto; }
+  .info_content .title { margin: auto; }
 
   .info_more-btn { display: none; }
 
@@ -2008,144 +2108,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 1.5rem;
 }
 
-.project-title {
-  font-size: var(--fs-2);
-  margin-bottom: 0.8rem;
-  color: var(--stanford-red);
-  font-weight: var(--fw-600);
-  letter-spacing: 0.5px;
-}
-
-.project-event {
-  color: var(--stanford-light-red);
-  font-size: var(--fs-4);
-  margin-bottom: 0.8rem;
-  font-weight: var(--fw-500);
-}
-
-/* Achievement styling - cleaner design */
-.project-achievement:not(:empty) {
-  background: linear-gradient(45deg, 
-    rgba(140, 21, 21, 0.1), 
-    rgba(140, 21, 21, 0.2)
-  );
-  border-left: 4px solid var(--stanford-red);
-  padding: 10px 15px;
-  margin: 15px 0;
-  border-radius: 0 8px 8px 0;
-  color: var(--stanford-light-red);
-  font-weight: var(--fw-500);
-}
-
-.project-description {
-  margin: 1rem 0;
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  line-height: 1.6;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.tech-tag {
-  background: var(--onyx);
-  color: var(--stanford-red);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: var(--fs-7);
-  margin-bottom: 5px;
-}
-
-/* Project links styling */
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.demo-link,
-.github-link {
-  background: var(--jet);
-  color: var(--stanford-red);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: var(--fs-7);
-  transition: var(--transition-1);
-  text-decoration: none;
-}
-
-.demo-link:hover,
-.github-link:hover {
-  background: var(--stanford-red);
-  color: var(--white-1);
-}
-
-/* Team members styling */
-.team-members {
-  margin: 1rem 0;
-  font-size: var(--fs-6);
-}
-
-.team-member {
-  display: inline-block;
-  background: var(--jet);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  margin: 0.2rem;
-  font-size: var(--fs-7);
-}
-
-/* Enhanced Mobile Responsiveness */
-@media (max-width: 400px) {
-  :root {
-    --fs-1: 22px;
-    --fs-2: 17px;
-    --fs-3: 16px;
-    --fs-4: 15px;
-    --fs-5: 14px;
-    --fs-6: 13px;
-    --fs-7: 12px;
-    --fs-8: 11px;
-  }
-
-  .sidebar, article {
-    padding: 20px 15px;
-  }
-
-  .navbar-link {
-    padding: 15px 5px;
-  }
-  
-  .project-links {
-    flex-direction: column;
-  }
-}
-
-/* Update other media query breakpoints for better responsiveness */
-// ...existing code...
-
-/* Remove modal outline for cleaner look */
-.modal-content {
-  background-color: var(--eerie-black-1);
-  padding: 20px;
-  border: 1px solid var(--jet);
-  width: 90%;
-  max-width: 700px;
-  max-height: 85%;
-  overflow-y: auto;
-  border-radius: 12px;
-  color: var(--white-1);
-  display: flex;
-  flex-direction: column;
-  outline: none;
-}
-
-/* Hackathon project text color improvements */
 .project-title {
   font-size: var(--fs-2);
   margin-bottom: 0.8rem;
